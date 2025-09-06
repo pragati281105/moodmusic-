@@ -45,13 +45,13 @@ cd MoodMusic
 Install dependencies:
 
 ```bash
-npm install
+pip install -r requirements.txt
 ```
 
 Run the app:
 
 ```bash
-npm start
+streamlit run app.py
 ```
 
 ---
