@@ -1,113 +1,68 @@
-# Mood Music in Git Commit Messages
+# MoodMusic 🎶
 
-## What is "Mood Music"?
-
-"Mood music" is a creative, informal line in a Git commit message that sets the **tone** for the changes you've made. It's a way to add personality and context to your code that goes beyond a dry technical summary.
-
-Think of it as the **soundtrack to your code changes**:
-
-* Fixed a frustrating bug? → Victory anthem.
-* Refactored messy code? → Chill-out track.
-* Added a big feature? → Energetic, uplifting tune.
+MoodMusic is a music recommendation app that generates playlists based on your **mood** and **language preference**. Instead of searching by artist or genre, you simply pick how you feel (or want to feel), and MoodMusic translates that into music recommendations using the **Spotify API**.
 
 ---
 
-## Why Use It?
+## ✨ Features
 
-* 🎨 **Adds Personality**: Makes the project's history more engaging and human.
-* 😊 **Communicates Emotion**: Provides a quick, emotional cue about the nature of the change.
-* 🎶 **A Fun Tradition**: Often becomes a team-wide ritual that fosters a relaxed, collaborative atmosphere.
-
----
-
-## Examples
-
-### 1. Big New Feature
-
-**Commit Message:**
-
-```
-feat: Add user profile page with editable fields
-```
-
-**Mood Music:**
-
-```
-Mood Music: "Starting to see the whole picture."
-```
-
-**Description:** Adds a new user profile section.
+* 🎭 **Mood-based playlists** → Select moods like *Happy, Chill, Energetic, Romantic*, or enter your own custom mood.
+* 🌍 **Language support** → Filter songs by your preferred language.
+* 🔎 **Smart recommendations** → Maps moods to Spotify features (energy, valence, tempo, etc.).
+* 📊 **Song display** → View results in a clean, interactive table.
+* ⬇️ **Download list** → Export recommendations for offline use.
+* 🎵 **Create playlists** → Add directly to your Spotify account.
 
 ---
 
-### 2. Bug Fix
+## 🚀 How It Works
 
-**Commit Message:**
-
-```
-fix: Corrected infinite loop in user login
-```
-
-**Mood Music:**
-
-```
-Mood Music: "Silence of the loop."
-```
-
-**Description:** Fixed a recursive login loop that froze the browser.
+1. **User Input**: Choose a mood + language.
+2. **Mood Translation**: Mood is mapped to specific music features.
+3. **Spotify API Query**: Fetches tracks matching those features.
+4. **Display & Actions**: Shows track list with options to download or save as a playlist.
 
 ---
 
-### 3. Refactor or Cleanup
+## 🛠️ Tech Stack
 
-**Commit Message:**
-
-```
-refactor: Clean up redundant code in the main component
-```
-
-**Mood Music:**
-
-```
-Mood Music: "Tidying up the house."
-```
-
-**Description:** Removed old variables and consolidated functions for better readability.
+* **Frontend**: React (UI)
+* **Backend**: Node.js / Express
+* **API**: Spotify Web API
+* **Styling**: Tailwind CSS
 
 ---
 
-### 4. Simple Typo or Docs Fix
+## 📦 Installation
 
-**Commit Message:**
+Clone the repo:
 
-```
-docs: Corrected a typo in the README file
-```
-
-**Mood Music:**
-
-```
-Mood Music: "A soft, quiet hum."
+```bash
+git clone https://github.com/pragati281105/MoodMusic.git
+cd MoodMusic
 ```
 
-**Description:** Fixed a small typo in documentation.
+Install dependencies:
 
----
-
-## How to Include It
-
-A common format is:
-
+```bash
+npm install
 ```
-<type>: <short summary>
 
-<detailed description of changes>
+Run the app:
 
-Mood Music: <your creative line>
+```bash
+npm start
 ```
 
 ---
 
-## Final Note
+## 🎮 Usage
 
-Using "mood music" is a small but fun way to inject personality into your commits. It reminds your teammates that you’re not just a code-writing machine — you’re a human with feelings about your work. 🎧
+1. Open the app in your browser.
+2. Log in with your Spotify account.
+3. Select your **mood** + **language**.
+4. Browse, download, or save your playlist directly to Spotify.
+
+---
+
+MoodMusic — *Because your emotions deserve a soundtrack.* 🎧
