@@ -7,3 +7,8 @@ __pycache__/
 *.pyo
 .vscode/
 .idea/
+moodmusic.db
+TODO.md
+test_live.py
+test_monitor.py
+test_recommender.py
