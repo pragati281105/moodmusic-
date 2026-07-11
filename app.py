@@ -1412,22 +1412,28 @@ def render_automix_sidebar():
 def render_privacy_consent() -> bool:
     st.sidebar.markdown("---")
     st.sidebar.markdown("### 🔒 PRIVACY")
-    if st.session_state.get("privacy_consented"):
+
+    # Streamlit preserves checkbox state across reruns via its key —
+    # no manual session_state or st.rerun() needed.
+    consented = st.sidebar.checkbox(
+        "I agree to the privacy policy",
+        key="privacy_consent_checkbox"
+    )
+
+    if consented:
         st.sidebar.markdown(
             '<div class="privacy-box" style="color:#6EE7B7;font-size:0.8rem;font-weight:600;">'
             '✓ Consent recorded</div>',
             unsafe_allow_html=True
         )
-        return True
-    if st.sidebar.checkbox("I agree to the privacy policy", key="privacy_consent_checkbox"):
-        st.session_state["privacy_consented"] = True
-        st.rerun()
-    st.sidebar.markdown(
-        '<div class="privacy-box"><span style="color:#FCD34D;font-size:0.8rem;">'
-        '⚠ Accept privacy policy to continue</span></div>',
-        unsafe_allow_html=True
-    )
-    return False
+    else:
+        st.sidebar.markdown(
+            '<div class="privacy-box"><span style="color:#FCD34D;font-size:0.8rem;">'
+            '⚠ Accept privacy policy to continue</span></div>',
+            unsafe_allow_html=True
+        )
+
+    return consented
 
 
 def render_spotify_attribution():
